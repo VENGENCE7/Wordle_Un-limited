@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Wordle_Unlimited/static/css/main.9d830b7e.css",
-    "main.js": "/Wordle_Unlimited/static/js/main.8d92310a.js",
+    "main.css": "/Wordle_Unlimited/static/css/main.ff781f45.css",
+    "main.js": "/Wordle_Unlimited/static/js/main.6446b90d.js",
     "static/js/787.e01666d6.chunk.js": "/Wordle_Unlimited/static/js/787.e01666d6.chunk.js",
     "static/media/WordBank.txt": "/Wordle_Unlimited/static/media/WordBank.5ad5b7b750d88626a416.txt",
     "index.html": "/Wordle_Unlimited/index.html",
-    "main.9d830b7e.css.map": "/Wordle_Unlimited/static/css/main.9d830b7e.css.map",
-    "main.8d92310a.js.map": "/Wordle_Unlimited/static/js/main.8d92310a.js.map",
+    "main.ff781f45.css.map": "/Wordle_Unlimited/static/css/main.ff781f45.css.map",
+    "main.6446b90d.js.map": "/Wordle_Unlimited/static/js/main.6446b90d.js.map",
     "787.e01666d6.chunk.js.map": "/Wordle_Unlimited/static/js/787.e01666d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d830b7e.css",
-    "static/js/main.8d92310a.js"
+    "static/css/main.ff781f45.css",
+    "static/js/main.6446b90d.js"
   ]
 }
