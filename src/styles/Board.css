@@ -5,24 +5,27 @@
   justify-content: center;
   align-items: center;
   z-index: 0;
-  margin: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 2%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .board {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-content: center;
   align-items: center;
   gap: 0.25em;
-  margin-bottom: 0.1em;
-  margin-top: 0.1em;
   padding: 3.5%;
+  margin-bottom: 1%;
   border-radius: 0.7em;
   border: 0.1em solid hsla(0, 17%, 2%, 0.9);
   background-color: hsla(240, 3%, 7%, 0.75);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 
 /* BOARD ANIMATION */
