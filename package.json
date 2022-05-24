@@ -1,5 +1,4 @@
 {
-  "homepage": "https://vengence7.github.io/Wordle_Unlimited/",
   "name": "wordle",
   "version": "0.1.0",
   "private": true,
@@ -12,11 +11,10 @@
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
     "react-scripts": "5.0.1",
+    "vercel": "^24.2.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
