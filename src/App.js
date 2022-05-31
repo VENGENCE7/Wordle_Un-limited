@@ -1,6 +1,4 @@
 import "./styles/App.css";
-import Board from "./componets/Board";
-import Keyboard from "./componets/Keyboard";
 import React, { useEffect, useState, createContext } from "react";
 import { emptyBoard, generateWordSet } from "./componets/WordleSet";
 import Nav from "./componets/Nav";
@@ -8,6 +6,7 @@ import Alert from "./componets/Alert";
 import GameOver from "./componets/GameOver";
 import GameStatistics from "./componets/GameStatistics";
 import Score from "./componets/Score";
+import Game from "./componets/Game";
 
 export const AppContext = createContext();
 
@@ -37,17 +36,26 @@ function App() {
   const [gamesPlayed, setGamesPlayed] = useState(0);
   const [gamesWon, setGamesWon] = useState(0);
   const [score, setScore] = useState(0);
+  const [attemptstats, setAttemptStats] = useState({
+    one: 0,
+    two: 0,
+    three: 0,
+    four: 0,
+    five: 0,
+    six: 0,
+  });
 
-  // for local storage
+  //==================================================================local storage
   let gameStats = {
     stat_gamesWon: gamesWon,
     stat_gamesPlayed: gamesPlayed,
     stat_winStreak: winStreak,
     stat_maxStreak: maxStreak,
     stat_score: score,
+    stat_attemptstats: attemptstats,
   };
 
-  // retrieve Local Storage
+  //==================================================================retrieve Local Storage
   useEffect(() => {
     const retrieved_stats = window.localStorage.getItem("STATS");
     gameStats =
@@ -59,16 +67,17 @@ function App() {
       setGamesPlayed(gameStats.stat_gamesPlayed);
       setGamesWon(gameStats.stat_gamesWon);
       setScore(gameStats.stat_score);
+      setAttemptStats(gameStats.stat_attemptstats);
     }
   }, []);
 
-  //  set local Storage
+  //==================================================================set local Storage
   useEffect(() => {
     window.localStorage.setItem("STATS", JSON.stringify(gameStats));
     // eslint-disable-next-line
   }, [gamesPlayed]);
 
-  // assign dictionary and correctWord
+  //==================================================================assign dictionary and correctWord
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.WordSet);
@@ -77,7 +86,7 @@ function App() {
     });
   }, [newGame]);
 
-  // alert timer
+  //==================================================================alert timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowAlert(false);
@@ -85,7 +94,7 @@ function App() {
     return () => clearTimeout(timer);
   }, [showAlert]);
 
-  // play the game again
+  //==================================================================play the game again
   const playAgain = () => {
     const newBoard = [
       ["", "", "", "", ""],
@@ -104,6 +113,8 @@ function App() {
     setAlertMessage("");
   };
 
+  //===================================================================ON SELECT
+
   const onSelect = (keyVal) => {
     if (gameOver.gameEnd === true) return;
     if (CurrAttempt.letterPos > 4) return;
@@ -112,6 +123,8 @@ function App() {
     setBoard(newBoard);
     setCurrAttempt({ ...CurrAttempt, letterPos: CurrAttempt.letterPos + 1 });
   };
+
+  //===================================================================ON DELETE
 
   const onDelete = () => {
     if (gameOver.gameEnd === true) return;
@@ -122,27 +135,28 @@ function App() {
     setCurrAttempt({ ...CurrAttempt, letterPos: CurrAttempt.letterPos - 1 });
   };
 
+  //===================================================================ON ENTER
   const onEnter = () => {
-    // Game Condition
+    //==================================================================Game Condition
     if (gameOver.gameEnd === true) {
       setNewGame(true);
       playAgain();
     }
 
-    // Board-Row Condition
+    //==================================================================Board-Row Condition
     if (CurrAttempt.letterPos <= 4 && CurrAttempt.letterPos > 0) {
       setAlertMessage("Not Enough Letters  (ㆆ_ㆆ) 👎");
       setShowAlert(true);
     }
 
     if (CurrAttempt.letterPos !== 5) return;
-    // Gather user Input
+    //==================================================================Gather user Input
     let currWord = "";
     for (let i = 0; i < 5; i++) {
       currWord += board[CurrAttempt.attempt][i];
     }
 
-    // checking if word is present in wordBank
+    //==================================================================checking if word is present in wordBank
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrAttempt({ attempt: CurrAttempt.attempt + 1, letterPos: 0 });
     } else {
@@ -150,47 +164,81 @@ function App() {
       setShowAlert(true);
     }
 
-    // Result Condition
-    // guessed correct
+    //==================================================================Result Condition
+    //==================================================================guessed correct
     if (
       currWord.toUpperCase() === correctWord.toUpperCase() &&
       wordSet.has(currWord.toLowerCase())
     ) {
       setTimeout(() => {
         setGameOver({ gameEnd: true, guessed: true });
-        // update stats
+        //==================================================================update stats
         setWinStreak(winStreak + 1);
         setAlertMessage("CongraTulaTionS ( ͡❛ ‿ ͡❛) ");
         setGamesPlayed(gamesPlayed + 1);
         setGamesWon(gamesWon + 1);
 
-        // Update Score
+        //==================================================================Update Score
         if (CurrAttempt.attempt === 0) {
+          setAttemptStats({ ...attemptstats, one: attemptstats.one + 1 });
           setScore(score + 15);
           setAlertMessage("!! Your a GeNiuS (⊙.⊙(☉̃ₒ☉)⊙.⊙) !!");
+          if (winStreak >= 5 && winStreak < 10) setScore(score + 17);
+          if (winStreak >= 10 && winStreak < 20) setScore(score + 18);
+          if (winStreak >= 20) setScore(score + 20);
+          if (gamesPlayed % 5 === 0) setScore(score + 25);
         }
+
         if (CurrAttempt.attempt === 1) {
+          setAttemptStats({ ...attemptstats, two: attemptstats.two + 1 });
           setScore(score + 10);
           setAlertMessage("!! Magnificient ᕙ(`▿´)ᕗ");
+          if (winStreak >= 5 && winStreak < 10) setScore(score + 12);
+          if (winStreak >= 10 && winStreak < 20) setScore(score + 13);
+          if (winStreak >= 20) setScore(score + 15);
+          if (gamesPlayed % 5 === 0) setScore(score + 20);
         }
+
         if (CurrAttempt.attempt === 2) {
+          setAttemptStats({ ...attemptstats, three: attemptstats.three + 1 });
           setScore(score + 8);
           setAlertMessage("!! Great (>‿◠)✌");
+          if (winStreak >= 5 && winStreak < 10) setScore(score + 10);
+          if (winStreak >= 10 && winStreak < 20) setScore(score + 11);
+          if (winStreak >= 20) setScore(score + 13);
+          if (gamesPlayed % 5 === 0) setScore(score + 18);
         }
+
         if (CurrAttempt.attempt === 3) {
+          setAttemptStats({ ...attemptstats, four: attemptstats.four + 1 });
           setScore(score + 6);
           setAlertMessage("!! Nice One Bud (¬‿¬)");
+          if (winStreak >= 5 && winStreak < 10) setScore(score + 8);
+          if (winStreak >= 10 && winStreak < 20) setScore(score + 9);
+          if (winStreak >= 20) setScore(score + 11);
+          if (gamesPlayed % 5 === 0) setScore(score + 16);
         }
-        if (CurrAttempt.attempt === 4) setScore(score + 4);
-        if (CurrAttempt.attempt === 5) setScore(score + 2);
 
-        // bonus points on streak
-        if (winStreak >= 5 && winStreak < 10) setScore(score + 2);
-        if (winStreak >= 10 && winStreak < 20) setScore(score + 3);
-        if (winStreak >= 20) setScore(score + 5);
+        if (CurrAttempt.attempt === 4) {
+          setAttemptStats({ ...attemptstats, five: attemptstats.five + 1 });
+          setScore(score + 4);
+          if (winStreak >= 5 && winStreak < 10) setScore(score + 6);
+          if (winStreak >= 10 && winStreak < 20) setScore(score + 7);
+          if (winStreak >= 20) setScore(score + 9);
+          if (gamesPlayed % 5 === 0) setScore(score + 14);
+        }
 
+        if (CurrAttempt.attempt === 5) {
+          setAttemptStats({ ...attemptstats, six: attemptstats.six + 1 });
+          setScore(score + 2);
+          if (winStreak >= 5 && winStreak < 10) setScore(score + 7);
+          if (winStreak >= 10 && winStreak < 20) setScore(score + 8);
+          if (winStreak >= 20) setScore(score + 10);
+          if (gamesPlayed % 5 === 0) setScore(score + 15);
+        }
+
+        //==================================================================update maxx streak
         if (winStreak > maxStreak) {
-          // update maxx streak
           setMaxStreak(winStreak);
           setAlertMessage(
             " !! ConGraTulaTionS,You Have SeT A New Personal Record !! ( ͡🔥 𝆒 ͡🔥)✌ "
@@ -200,11 +248,11 @@ function App() {
       return;
     }
 
-    //  guess wrong
+    //==================================================================guess wrong
     if (CurrAttempt.attempt === 5 && wordSet.has(currWord.toLowerCase())) {
       setTimeout(() => {
         setGameOver({ gameEnd: true, guessed: false });
-        // update stats
+        //==================================================================update stats
         if (score >= 50) setScore(score - 3);
         setWinStreak(0);
         setGamesPlayed(gamesPlayed + 1);
@@ -232,10 +280,13 @@ function App() {
           CurrAttempt,
           setCurrAttempt,
           correctWord,
+          //=============Functions
           onSelect,
           onDelete,
           onEnter,
+          //=============GameOver
           gameOver,
+          //=============LetterState
           disabledLetters,
           setDisabledLetters,
           correctLetters,
@@ -244,18 +295,13 @@ function App() {
           setAlmostLetters,
         }}
       >
-        <Score Score={score} />
+        <Score Score={score} Allstats={gameStats} />
         {gameOver.gameEnd ? (
           <GameOver message={alertMessage} />
         ) : showAlert ? (
           <Alert message={alertMessage} />
         ) : null}
-        <div className="game">
-          <div className="game-container">
-            <Board />
-            <Keyboard />
-          </div>
-        </div>
+        <Game />
       </AppContext.Provider>
     </div>
   );

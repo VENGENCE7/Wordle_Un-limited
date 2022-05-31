@@ -7,12 +7,12 @@ function Tile(props) {
     board,
     correctWord,
     CurrAttempt,
+    // almostLetters,
     setDisabledLetters,
     setCorrectLetters,
     setAlmostLetters,
   } = useContext(AppContext);
 
-  // const [letterState,setLetterState]=useState("");
   const letter = board[props.attemptVal][props.letterPos];
 
   const correct = correctWord.toUpperCase()[props.letterPos] === letter;
@@ -27,11 +27,13 @@ function Tile(props) {
     (correct ? "correct" : almost ? "almost" : "error");
 
   useEffect(() => {
+    if (letter !== "" && correct && !almost && !wrong) {
+      setCorrectLetters((corr) => [...corr, letter]);
+    }
     if (letter !== "" && !correct && !almost) {
       setDisabledLetters((prev) => [...prev, letter]);
-    } else if (letter !== "" && correct && !almost && !wrong) {
-      setCorrectLetters((corr) => [...corr, letter]);
-    } else if (letter !== "" && !correct && almost && !wrong) {
+    }
+    if (letter !== "" && !correct && almost && !wrong) {
       setAlmostLetters((alm) => [...alm, letter]);
     } // eslint-disable-next-line
   }, [CurrAttempt.attempt]);

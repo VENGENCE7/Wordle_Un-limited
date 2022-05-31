@@ -17,31 +17,6 @@ body {
   margin: 0.9%;
 }
 
-.score {
-  margin-top: 1%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bolder;
-}
-
-.game {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 82%;
-  margin-top: 1%;
-  z-index: 0;
-}
-
-.game-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.7em;
-}
 /*  BG ANimation=========================================================================================================================== */
 
 @keyframes bg-animation {
@@ -58,6 +33,8 @@ body {
 @media (min-width: 320px) and (max-width: 1200px) {
   body {
     padding: 0%;
+    margin: 0;
+    height: 99.5vh;
   }
 
   .Nav {
@@ -65,26 +42,26 @@ body {
   }
 
   .App {
-    height: 98vh;
+    height: 95vh;
   }
 
   .score {
-    font-size: 170%;
+    margin: 0.5%;
+    font-size: 160%;
   }
 
   /* =================== stats ======================== */
 
   .Stats-container {
-    margin: 1.5%;
-    margin-top: 3%;
-    height: 13%;
+    margin: 2%;
+    height: 11.4%;
   }
 
   .stats {
     align-items: center;
     height: 100%;
-    font-size: 130%;
-  }
+    font-size: 120%;
+  } 
 
   /* =================== alert ======================== */
 
@@ -96,28 +73,30 @@ body {
   /* =================== game ======================== */
 
   .game {
-    height: 75%;
+    height: fit-content;
   }
+
   .game-container {
-    height: 100%;
-    width: 95%;
+    height: max-content;
+    width: 100%;
     flex-direction: column;
+    gap: 1%;
   }
 
   /* =================== board ======================== */
 
   .board-container {
-    display: flex;
-    margin-top: 0;
-    width: 75%;
-    height: 70%;
-    margin-bottom: 0.3em;
+    display: inline-flex;
+    width: 85%;
+    height: 60%;
   }
+
   .board {
-    font-size: 125%;
-    height: 90%;
+    font-size: 120%;
+    height: 99%;
     width: 100%;
   }
+
   .row {
     height: 100%;
     width: 100%;
@@ -132,14 +111,16 @@ body {
   /* ====================KEYBOARD============================= */
 
   .keyboard {
-    height: 27%;
+    height: 29%;
     width: 100%;
   }
+
   .keyboard-container {
     height: 100%;
     width: 100%;
     font-size: 145%;
   }
+
   .line1,
   .line2,
   .line3 {
@@ -154,5 +135,39 @@ body {
 
   .gameover-container {
     font-size: large;
+  }
+
+  /* =================== MODAL ======================== */
+
+  .modal {
+    padding: 5%;
+    gap: 1%;
+  }
+
+  .modal-container {
+    width: 90%;
+  }
+  /* =================== MODAL NAV ======================== */
+  .Modal-Nav {
+    margin-top: 1%;
+    width: 100%;
+    font-size: 70%;
+  }
+
+  .nav-head .icon {
+    font-size: 145%;
+  }
+  /* =================== MODAL-EXAMPLE ======================== */
+  .example {
+    font-size: 0.77em;
+  }
+  /* =================== MODAL-SCORES ======================== */
+  .scoringrules-container {
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+  table thead,
+  td {
+    font-size: 80%;
   }
 }
