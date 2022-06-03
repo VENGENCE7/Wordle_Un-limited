@@ -1,0 +1,17 @@
+.single-stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: aliceblue;
+  padding: 1%;
+}
+
+.stat-heading {
+  font-weight: bold;
+}
+
+.stat-value {
+  color: #00a4bd;
+}

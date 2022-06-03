@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: whitesmoke 0.15em solid;
+  border: pink 0.15em solid;
+  padding: 1%;
   border-radius: 1em;
   width: 90%;
   border-top: none;
@@ -16,14 +17,12 @@
   padding: 1%;
 }
 
-.example > p {
-  font-size: 95%;
-}
-
 .example-heading {
   color: whitesmoke;
   font-size: 110%;
-  border-bottom: 0.1em whitesmoke solid;
+  padding: 1%;
+  border-bottom: 0.2em solid;
+  border-radius: 0.5em;
 }
 
 .rules-row {
@@ -32,7 +31,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.25em;
-  width: 90%;
+  width: 80%;
   background-color: #818384;
   padding: 1%;
 }
