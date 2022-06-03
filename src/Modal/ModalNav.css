@@ -87,6 +87,7 @@
     height: 2em;
     width: 2em;
     background: #29fd53;
+    color: black;
     border-radius: 50%;
     border: 0.15em black solid;
   }
