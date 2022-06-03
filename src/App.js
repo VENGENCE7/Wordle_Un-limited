@@ -73,6 +73,7 @@ function App() {
 
   //==================================================================set local Storage
   useEffect(() => {
+    window.localStorage.clear();
     window.localStorage.setItem("STATS", JSON.stringify(gameStats));
     // eslint-disable-next-line
   }, [gamesPlayed]);

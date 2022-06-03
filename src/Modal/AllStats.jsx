@@ -6,53 +6,43 @@ import "./AllStats.css";
 function AllStats() {
   const { allstats } = useContext(ModalContext);
 
-  const guessRate =
-    allstats.stat_gamesPlayed !== 0
-      ? ((allstats.stat_gamesWon / allstats.stat_gamesPlayed) * 100).toFixed(3)
-      : 0;
+  const guessRate = allstats.stat_gamesPlayed
+    ? ((allstats.stat_gamesWon / allstats.stat_gamesPlayed) * 100).toFixed(3)
+    : 0;
 
-  const oneRate =
-    allstats.stat_attemptstats.one !== null
-      ? (
-          (allstats.stat_attemptstats.one / allstats.stat_gamesWon) *
-          100
-        ).toFixed(2)
-      : 0;
-  const twoRate =
-    allstats.stat_attemptstats.one !== null
-      ? (
-          (allstats.stat_attemptstats.two / allstats.stat_gamesWon) *
-          100
-        ).toFixed(2)
-      : 0;
-  const threeRate =
-    allstats.stat_attemptstats.one !== null
-      ? (
-          (allstats.stat_attemptstats.three / allstats.stat_gamesWon) *
-          100
-        ).toFixed(2)
-      : 0;
-  const fourRate =
-    allstats.stat_attemptstats.one !== null
-      ? (
-          (allstats.stat_attemptstats.four / allstats.stat_gamesWon) *
-          100
-        ).toFixed(2)
-      : 0;
-  const fiveRate =
-    allstats.stat_attemptstats.one !== null
-      ? (
-          (allstats.stat_attemptstats.five / allstats.stat_gamesWon) *
-          100
-        ).toFixed(2)
-      : 0;
-  const sixRate =
-    allstats.stat_attemptstats.one !== null
-      ? (
-          (allstats.stat_attemptstats.six / allstats.stat_gamesWon) *
-          100
-        ).toFixed(2)
-      : 0;
+  const oneRate = allstats.stat_attemptstats.one
+    ? ((allstats.stat_attemptstats.one / allstats.stat_gamesWon) * 100).toFixed(
+        2
+      )
+    : 0;
+  const twoRate = allstats.stat_attemptstats.one
+    ? ((allstats.stat_attemptstats.two / allstats.stat_gamesWon) * 100).toFixed(
+        2
+      )
+    : 0;
+  const threeRate = allstats.stat_attemptstats.one
+    ? (
+        (allstats.stat_attemptstats.three / allstats.stat_gamesWon) *
+        100
+      ).toFixed(2)
+    : 0;
+  const fourRate = allstats.stat_attemptstats.one
+    ? (
+        (allstats.stat_attemptstats.four / allstats.stat_gamesWon) *
+        100
+      ).toFixed(2)
+    : 0;
+  const fiveRate = allstats.stat_attemptstats.one
+    ? (
+        (allstats.stat_attemptstats.five / allstats.stat_gamesWon) *
+        100
+      ).toFixed(2)
+    : 0;
+  const sixRate = allstats.stat_attemptstats.one
+    ? ((allstats.stat_attemptstats.six / allstats.stat_gamesWon) * 100).toFixed(
+        2
+      )
+    : 0;
 
   return (
     <div className="Allstats-container">
@@ -104,13 +94,3 @@ function AllStats() {
 }
 
 export default AllStats;
-
-// stat_attemptstats: {one: 1, four: 2, two: 4, three: 1}
-// stat_gamesPlayed: 176
-// stat_gamesWon: 148
-// stat_maxStreak: 36
-// stat_score: 876
-// stat_winStreak: 37
-
-// value={allstats.stat_attemptstats.one}
-// value={allstats.stat_gamesWon}
