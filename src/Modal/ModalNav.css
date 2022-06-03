@@ -49,13 +49,7 @@
 .nav-head:hover .icon,
 .nav-head:focus .icon,
 .nav-head:active .icon {
-  transform: translateY(-1em);
-  transition: 0.5s;
-  height: 2em;
-  width: 2em;
-  background: #29fd53;
-  border-radius: 50%;
-  border: 0.15em black solid;
+  animation: reveal 0.5s ease-out forwards;
 }
 
 .heading {
@@ -74,4 +68,26 @@
 .nav-head:hover .heading {
   opacity: 1;
   transform: translateY(0.5em);
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(-1em);
+    transition: 0.5s;
+    height: 2em;
+    width: 2em;
+    background: #29fd53;
+    border-radius: 50%;
+    border: 0.15em black solid;
+  }
+
+  to {
+    transform: translateY(-1em);
+    transition: 0.5s;
+    height: 2em;
+    width: 2em;
+    background: #29fd53;
+    border-radius: 50%;
+    border: 0.15em black solid;
+  }
 }

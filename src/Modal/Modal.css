@@ -82,13 +82,34 @@
 
 .Modal-button:hover,
 .Modal-button:focus {
-  letter-spacing: 0.35em;
-  box-shadow: inset 0.2em 0.5em 0.5em -0.4em hsla(132, 98%, 58%, 0.7),
-    inset 0.2em 0.5em 0.5em -0.4em hsla(132, 98%, 58%, 0.7),
-    inset 0.2em 0.5em 0.5em -0.4em hsla(132, 98%, 58%, 0.7),
-    inset 0.2em 0.5em 0.5em -0.4em hsla(132, 98%, 58%, 0.7);
+  animation: btn-anim .5s ease forwards;
+}
 
-  transform: translateY(-0.5em);
+/* Button animation */
+@keyframes btn-anim {
+  from {
+    border-radius: 1em;
+    margin-top: 1%;
+    color: #29fd53;
+    font-size: 120%;
+    height: 8%;
+    width: fit-content;
+    background-color: transparent;
+    border-color: hsl(132, 98%, 58%);
+    transition: 0.5s;
+  }
+
+  to {
+    color: black;
+    letter-spacing: 0.35em;
+    border-color: #ff77cc;
+    background-color: snow;
+    box-shadow: inset 0.2em 0.5em 0.5em -0.4em #ff77cc,
+      inset 0.2em 0.5em 0.5em -0.4em #ff77cc,
+      inset 0.2em 0.5em 0.5em -0.4em #ff77cc,
+      inset 0.2em 0.5em 0.5em -0.4em #ff77cc;
+    transform: translateY(-0.5em);
+  }
 }
 
 /* Heading animation */
