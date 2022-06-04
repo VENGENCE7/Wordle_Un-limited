@@ -1,4 +1,46 @@
-# Getting Started with Create React App
+<div id="top"></div>
+
+<!-- PROJECT SHIELDS -->
+<!--
+-->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![BSD3 License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Vercel][vercel-shield]][vercel-url]
+[![GH-Pages][gh-pages-shield]][gh-pages-url]
+
+<!-- PROJECT LOGO -->
+<br />
+
+<div align="center">
+  <a href="https://github.com/VENGENCE7/Wordle_Unlimited">
+    <img src="public/Wordle.png" alt="Logo" width="250" height="250">
+  </a>
+
+<h3 align="center">Wordle_Unlimited</h3>
+
+  <p align="center">
+    This is a Wordle-Unlimited clone with my touch to its UI ,giving it a modern look and experience to the user.It has 5757 words availabke to guess.Developed using react.It also uses Local Storage,hence ur progress isn't lost until u clear browsing data XD. Have fun :)  playing it.
+    <br />
+    <br />
+    <a href="https://vengence7.github.io/Wordle_Unlimited/"><strong> << View Deployment >></strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/VENGENCE7/Wordle_Unlimited/issues">Report Bug</a>
+     : 
+    <a href="https://github.com/VENGENCE7/Wordle_Unlimited/issues">Request Feature</a>
+  </p>
+</div>
+
+# Preview
+
+![Worlde_Unlimited](https://user-images.githubusercontent.com/86911386/171996970-5cff843e-e2c4-49d8-a212-88194f0665c3.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +110,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/VENGENCE7/Wordle_Unlimited.svg?style=for-the-badge
+[contributors-url]: https://github.com/VENGENCE7/Wordle_Unlimited/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/VENGENCE7/Wordle_Unlimited.svg?style=for-the-badge
+[forks-url]: https://github.com/VENGENCE7/Wordle_Unlimited/network/members
+[stars-shield]: https://img.shields.io/github/stars/VENGENCE7/Wordle_Unlimited.svg?style=for-the-badge
+[stars-url]: https://github.com/VENGENCE7/Wordle_Unlimited/stargazers
+[issues-shield]: https://img.shields.io/github/issues/VENGENCE7/Wordle_Unlimited.svg?style=for-the-badge
+[issues-url]: https://github.com/VENGENCE7/Wordle_Unlimited/issues
+[license-shield]: https://img.shields.io/github/license/VENGENCE7/Wordle_Unlimited.svg?style=for-the-badge
+[license-url]: https://github.com/VENGENCE7/Wordle_Unlimited/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-url]: https://linkedin.com/in/bhavish-anand-2113a6206
+[vercel-shield]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
+[vercel-url]: https://wordle-unlimited-vengence7.vercel.app
+[gh-pages-shield]: https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white
+[gh-pages-url]: https://vengence7.github.io/Wordle_Unlimited/
