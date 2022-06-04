@@ -7,7 +7,7 @@ function AllStats() {
   const { allstats } = useContext(ModalContext);
 
   const guessRate = allstats.stat_gamesPlayed
-    ? ((allstats.stat_gamesWon / allstats.stat_gamesPlayed) * 100).toFixed(3)
+    ? ((allstats.stat_gamesWon / allstats.stat_gamesPlayed) * 100).toFixed(2)
     : 0;
 
   const oneRate = allstats.stat_attemptstats.one
@@ -24,19 +24,19 @@ function AllStats() {
     ? (
         (allstats.stat_attemptstats.three / allstats.stat_gamesWon) *
         100
-      ).toFixed(2)
+      ).toFixed(1)
     : 0;
   const fourRate = allstats.stat_attemptstats.one
     ? (
         (allstats.stat_attemptstats.four / allstats.stat_gamesWon) *
         100
-      ).toFixed(2)
+      ).toFixed(1)
     : 0;
   const fiveRate = allstats.stat_attemptstats.one
     ? (
         (allstats.stat_attemptstats.five / allstats.stat_gamesWon) *
         100
-      ).toFixed(2)
+      ).toFixed(1)
     : 0;
   const sixRate = allstats.stat_attemptstats.one
     ? ((allstats.stat_attemptstats.six / allstats.stat_gamesWon) * 100).toFixed(
@@ -62,7 +62,7 @@ function AllStats() {
       </div>
       <span className="Allstats-heading">SCORE</span>
       <span className="Allstats-Score">{allstats.stat_score}</span>
-      <span className="Allstats-heading">Guesses</span>
+      <span className="Allstats-heading">Attempt Wins</span>
       <div className="Allstats-line">
         <WordleStats title="One" value={allstats.stat_attemptstats.one} />
         <WordleStats title="Two" value={allstats.stat_attemptstats.two} />
@@ -73,10 +73,11 @@ function AllStats() {
         <WordleStats title="Five" value={allstats.stat_attemptstats.five} />
         <WordleStats title="Six" value={allstats.stat_attemptstats.six} />
       </div>
-      <span className="Allstats-heading">Guessing %</span>
+      <span className="Allstats-heading">Success %</span>
       <div className="Allstats-line">
         <WordleStats title="Avg" value={guessRate} />
       </div>
+      <span className="Allstats-heading">Attempt Win %</span>
       <div className="Allstats-line">
         <WordleStats title="One" value={oneRate} />
         <WordleStats title="Two" value={twoRate} />

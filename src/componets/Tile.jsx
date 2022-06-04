@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { AppContext } from "../App";
+// import { CheckStatus } from "./CheckStatus";
 import "../styles/Tile.css";
 
 function Tile(props) {
@@ -7,13 +8,14 @@ function Tile(props) {
     board,
     correctWord,
     CurrAttempt,
-    // almostLetters,
     setDisabledLetters,
     setCorrectLetters,
     setAlmostLetters,
   } = useContext(AppContext);
 
   const letter = board[props.attemptVal][props.letterPos];
+
+  // const avail = useCallback(CheckStatus(correctWord, letter));
 
   const correct = correctWord.toUpperCase()[props.letterPos] === letter;
 
@@ -22,7 +24,9 @@ function Tile(props) {
 
   const wrong = !correct && !almost && letter !== "";
 
-  const letterState =
+  let letterState;
+
+  letterState =
     CurrAttempt.attempt > props.attemptVal &&
     (correct ? "correct" : almost ? "almost" : "error");
 
