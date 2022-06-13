@@ -20,6 +20,20 @@
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+.BonusRound {
+  background: #000428;
+  background: -webkit-linear-gradient(
+    to top,
+    #004e92,
+    #000428
+  );
+  background: linear-gradient(
+    to top,
+    #004e92,
+    #000428
+  );
+}
+
 .line1 {
   display: flex;
   grid-template-columns: repeat(20, minmax(auto, 1.25em));
@@ -73,14 +87,6 @@
 .line3 > .big {
   min-width: 3.15em;
 }
-
-/* #enter {
-  margin-left: 0.4em;
-}
-
-#delete {
-  margin-right: 0.4em;
-} */
 
 /* DISABLED KEY CSS */
 .line1 > .disabled {

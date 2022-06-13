@@ -1,10 +1,16 @@
-import Tile from "./Tile";
+import React, { useContext } from "react";
 import "../styles/Board.css";
+import Tile from "./Tile";
+import { AppContext } from "../App";
 
 function Board() {
+  const { gamesPlayed } = useContext(AppContext);
+
+  const bonusRound = gamesPlayed % 5 === 0 ? "BonusRound" : undefined;
+
   return (
     <div className="board-container">
-      <div className="board slide-in-blurred-bl">
+      <div className={"board slide-in-blurred-bl " + bonusRound}>
         <div className="row">
           <Tile attemptVal={0} letterPos={0} />
           <Tile attemptVal={0} letterPos={1} />

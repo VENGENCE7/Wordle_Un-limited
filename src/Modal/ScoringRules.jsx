@@ -42,7 +42,12 @@ function ScoringRules() {
       </table>
 
       <span className="Bonus-info">
-        <GiTrophy /> Every 5th game,on winning you get +10
+        <GiTrophy /> Every 5th round is a BONUS-round <br />
+        <GiTrophy />
+        Color changes in BONUS round
+        <br />
+        <GiTrophy />
+        On Winning you get +10
       </span>
 
       <div className="heading">

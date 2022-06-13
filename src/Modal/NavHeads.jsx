@@ -13,7 +13,6 @@ function NavHeads() {
   if (showNavHead === 2) return <Example />;
   if (showNavHead === 3) return <ScoringRules />;
   if (showNavHead === 4) return <AllStats />;
-  
 }
 
 export default NavHeads;

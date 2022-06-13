@@ -2,8 +2,6 @@ import React from "react";
 import "./WordleStats.css";
 
 function WordleStats(props) {
-
-  
   return (
     <div className="single-stats-container">
       <div className="stat-heading-container">

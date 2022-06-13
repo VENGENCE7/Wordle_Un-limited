@@ -71,6 +71,7 @@
 .Modal-button {
   border-radius: 1em;
   margin-top: 1%;
+  margin-bottom: 2%;
   color: #29fd53;
   font-size: 120%;
   height: 8%;
@@ -82,7 +83,7 @@
 
 .Modal-button:hover,
 .Modal-button:focus {
-  animation: btn-anim .5s ease forwards;
+  animation: btn-anim 0.5s ease forwards;
 }
 
 /* Button animation */

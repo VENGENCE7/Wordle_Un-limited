@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoStatsChartOutline } from "react-icons/io5";
 import "../styles/GameStatistics.css";
+import { AppContext } from "../App";
 
 function GameStatistics(props) {
   let winRate = 0;
+
+  const { gamesPlayed } = useContext(AppContext);
+  const bonusRound = gamesPlayed % 5 === 0 ? "BonusRound" : undefined;
 
   if (props.played !== 0)
     winRate = Math.round((props.wins / props.played) * 100);
 
   return (
     <div className="Stats-container">
-      <div className="stats slide-in-blurred-bottom">
+      <div className={"stats slide-in-blurred-bottom "+ bonusRound}>
         <span>
           <div className="stats-icon">
             {" "}

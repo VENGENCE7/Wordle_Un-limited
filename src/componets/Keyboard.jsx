@@ -11,11 +11,14 @@ function Keyboard() {
     disabledLetters,
     correctLetters,
     almostLetters,
+    gamesPlayed,
   } = useContext(AppContext);
 
   const keys1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
   const keys2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
   const keys3 = ["Z", "X", "C", "V", "B", "N", "M"];
+
+  const bonusRound = gamesPlayed % 5 === 0 ? "BonusRound" : undefined;
 
   // Keyboard key reading
   // eslint-disable-next-line
@@ -53,7 +56,7 @@ function Keyboard() {
 
   return (
     <div className="keyboard " onKeyDown={keyPressed}>
-      <div className="keyboard-container slide-in-blurred-br">
+      <div className={"keyboard-container slide-in-blurred-br " + bonusRound}>
         <div className="line1">
           {keys1.map((key, ind) => {
             return (
@@ -81,7 +84,7 @@ function Keyboard() {
           })}
         </div>
         <div className="line3">
-          <Key keyVal={"ENTER"} bigKey="True" id="enter"/>
+          <Key keyVal={"ENTER"} bigKey="True" id="enter" />
           {keys3.map((key, ind) => {
             return (
               <Key
@@ -93,7 +96,7 @@ function Keyboard() {
               />
             );
           })}
-          <Key keyVal="DELETE" bigKey="True" id="delete"/>
+          <Key keyVal="DELETE" bigKey="True" id="delete" />
         </div>
       </div>
     </div>

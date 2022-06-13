@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   border: 0.1em solid;
-  padding: 10%;
+  width: min-content;
   gap: 1%;
   border-image: repeating-linear-gradient(
       to bottom right,

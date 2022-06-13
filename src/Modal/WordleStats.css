@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: aliceblue;
+  color: #f0f8ff;
   padding: 1%;
 }
 
@@ -13,5 +13,6 @@
 }
 
 .stat-value {
-  color: #00a4bd;
+  font-weight: bold;
+  color: #00ffff;
 }

@@ -45,6 +45,9 @@ function App() {
     six: 0,
   });
 
+  // BONUS ROUND
+  const bonusRound = gamesPlayed % 5 === 0 ? "BonusAPP" : undefined;
+
   //==================================================================local storage
   let gameStats = {
     stat_gamesWon: gamesWon,
@@ -266,14 +269,7 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Nav />
-      <GameStatistics
-        wins={gamesWon}
-        streak={winStreak}
-        played={gamesPlayed}
-        max={maxStreak}
-      />
+    <div className={"App " + bonusRound}>
       <AppContext.Provider
         value={{
           board,
@@ -294,8 +290,17 @@ function App() {
           setCorrectLetters,
           almostLetters,
           setAlmostLetters,
+          // ===========Games
+          gamesPlayed,
         }}
       >
+        <Nav />
+        <GameStatistics
+          wins={gamesWon}
+          streak={winStreak}
+          played={gamesPlayed}
+          max={maxStreak}
+        />
         <Score Score={score} Allstats={gameStats} />
         {gameOver.gameEnd ? (
           <GameOver message={alertMessage} />
