@@ -7,3 +7,8 @@ strap
 puurr
 roars
 error
+trays
+balls
+troll
+calls
+kills
