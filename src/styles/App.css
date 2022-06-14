@@ -186,6 +186,6 @@ body .BonusAPP {
   }
 
   .chart {
-    width: 98%;
+    max-width: 99%;
   }
 }

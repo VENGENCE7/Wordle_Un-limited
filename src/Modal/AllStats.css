@@ -36,3 +36,11 @@
   justify-content: center;
   gap: 4%;
 }
+
+.chart{
+  display: flex;
+  /* border: #ff77cc solid 0.1em; */
+  /* width: fit-content;
+  height: fit-content; */
+  padding: 1%;
+}

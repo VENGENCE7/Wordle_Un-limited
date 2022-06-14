@@ -43,8 +43,8 @@ export function StatsChart() {
   };
 
   const options = {
-    responsive: true,
-    maintainAspectRatio:true,
+    // responsive: true,
+    // maintainAspectRatio:true,
     animation: {
       easing: "easeInOutCubic",
     },
@@ -59,5 +59,9 @@ export function StatsChart() {
     },
   };
 
-  return <Doughnut data={data} options={options} />;
+  return (
+    <div className="chart">
+      <Doughnut data={data} options={options} />
+    </div>
+  );
 }

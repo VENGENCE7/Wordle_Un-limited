@@ -31,9 +31,7 @@ function AllStats() {
       <span className="Allstats-heading">SCORE</span>
       <span className="Allstats-Score">{allstats.stat_score}</span>
       <span className="Allstats-heading">Attempt Stats</span>
-      <div className="chart">
-        <StatsChart />
-      </div>
+      <StatsChart />
     </div>
   );
 }
