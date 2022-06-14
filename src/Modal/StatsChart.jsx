@@ -43,20 +43,24 @@ export function StatsChart() {
   };
 
   const options = {
-    // responsive: true,
-    // maintainAspectRatio:true,
-    animation: {
-      easing: "easeInOutCubic",
-    },
-    plugins: {
-      legend: {
-        labels: {
-          color: "#f0f8ff",
-          font: 16,
-          usePointStyle: true,
+    responsive: [true],
+    maintainAspectRatio: [true],
+    animation: [
+      {
+        easing: "easeInOutCubic",
+      },
+    ],
+    plugins: [
+      {
+        legend: {
+          labels: {
+            color: "#f0f8ff",
+            font: 16,
+            usePointStyle: true,
+          },
         },
       },
-    },
+    ],
   };
 
   return (
