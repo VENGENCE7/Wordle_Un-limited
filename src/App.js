@@ -24,6 +24,8 @@ function App() {
   const [gameOver, setGameOver] = useState({ gameEnd: false, guessed: false });
   // Correct guess
   const [correctWord, setCorrectWord] = useState("");
+  // Current word
+  let currWord = "";
   // alert message
   const [alertMessage, setAlertMessage] = useState("");
   // alert condition
@@ -155,7 +157,6 @@ function App() {
 
     if (CurrAttempt.letterPos !== 5) return;
     //==================================================================Gather user Input
-    let currWord = "";
     for (let i = 0; i < 5; i++) {
       currWord += board[CurrAttempt.attempt][i];
     }
@@ -277,6 +278,7 @@ function App() {
           CurrAttempt,
           setCurrAttempt,
           correctWord,
+          currWord,
           //=============Functions
           onSelect,
           onDelete,

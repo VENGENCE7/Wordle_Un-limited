@@ -12,25 +12,45 @@ function ModalNav() {
   return (
     <div className="Modal-Nav">
       <div className="modal-nav-content">
-        <div className="nav-head" onClick={() => setShowNavHead(1)}>
+        <div
+          className="nav-head"
+          onClick={() => {
+            setShowNavHead(1);
+          }}
+        >
           <span className="icon">
             <GoUnverified />
           </span>
           <span className="heading">How to PLAY</span>
         </div>
-        <div className="nav-head" onClick={() => setShowNavHead(2)}>
+        <div
+          className="nav-head"
+          onClick={() => {
+            setShowNavHead(2);
+          }}
+        >
           <span className="icon">
             <HiViewList />
           </span>
           <span className="heading">Example</span>
         </div>
-        <div className="nav-head" onClick={() => setShowNavHead(3)}>
+        <div
+          className="nav-head"
+          onClick={() => {
+            setShowNavHead(3);
+          }}
+        >
           <span className="icon">
             <GiFireZone />
           </span>
           <span className="heading">Score Rules</span>
         </div>
-        <div className="nav-head" onClick={() => setShowNavHead(4)}>
+        <div
+          className="nav-head"
+          onClick={() => {
+            setShowNavHead(4);
+          }}
+        >
           <span className="icon">
             <BsClipboardData />
           </span>

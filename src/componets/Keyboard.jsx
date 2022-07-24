@@ -55,7 +55,7 @@ function Keyboard() {
   }, [keyPressed]);
 
   return (
-    <div className="keyboard " onKeyDown={keyPressed}>
+    <div className="keyboard" onKeyDown={keyPressed}>
       <div className={"keyboard-container slide-in-blurred-br " + bonusRound}>
         <div className="line1">
           {keys1.map((key, ind) => {
