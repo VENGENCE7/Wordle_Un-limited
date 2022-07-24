@@ -1,7 +1,7 @@
 import React from "react";
-import Board from "./Board";
-import Keyboard from "./Keyboard";
-import "../styles/Game.css";
+import Board from "../PlayingArea/GameBoard/Board";
+import Keyboard from "./GameKeyBoard/KeyBoard.jsx";
+import "../PlayingArea/Game.css";
 
 function Game() {
   return (

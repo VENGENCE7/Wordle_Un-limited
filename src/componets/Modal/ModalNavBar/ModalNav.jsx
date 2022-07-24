@@ -3,7 +3,7 @@ import { BsClipboardData } from "react-icons/bs";
 import { GiFireZone } from "react-icons/gi";
 import { GoUnverified } from "react-icons/go";
 import { HiViewList } from "react-icons/hi";
-import { ModalContext } from "./Modal";
+import { ModalContext } from "../Modal";
 import "./ModalNav.css";
 
 function ModalNav() {

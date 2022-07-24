@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GiHelp } from "react-icons/gi";
-import "../styles/Score.css";
-import Modal from "../Modal/Modal";
+import "./Score.css";
+import Modal from "../../Modal/Modal";
 
 function Score(props) {
   const [showModal, setShowModal] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Alert.css";
+import "./Alert.css";
 function Alert(props) {
   return (
     <div className="alert-container bounce-in-fwd">

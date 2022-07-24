@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useContext } from "react";
-import Key from "./Key";
-import { AppContext } from "../App";
-import "../styles/KeyBoard.css";
+import Key from "./KeyBoardKeys/Key.jsx";
+import { AppContext } from "../../../../App";
+import "../GameKeyBoard/KeyBoard.css";
 
 function Keyboard() {
   const {

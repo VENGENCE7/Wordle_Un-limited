@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import { AppContext } from "../App";
-import "../styles/Tile.css";
+import { AppContext } from "../../../../../App";
+import "../BoardTile/Tile.css";
 
 function Tile(props) {
   const {

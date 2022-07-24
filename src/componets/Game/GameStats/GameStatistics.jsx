@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { IoStatsChartOutline } from "react-icons/io5";
-import "../styles/GameStatistics.css";
-import { AppContext } from "../App";
+import "./GameStatistics.css";
+import { AppContext } from "../../../App";
 
 function GameStatistics(props) {
   let winRate = 0;

@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { ModalContext } from "./Modal";
+import { ModalContext } from "../Modal";
 
-import Rules from "./Rules";
-import Example from "./Example";
-import ScoringRules from "./ScoringRules";
-import AllStats from "./AllStats";
+import Rules from "../Pages/HowToPlay/Rules";
+import Example from "../Pages/WordleExample/Example";
+import ScoringRules from "../Pages/ScoringRules/ScoringRules";
+import AllStats from "../Pages/WordleStats/AllStats";
 
 function NavHeads() {
   const { showNavHead } = useContext(ModalContext);

@@ -1,5 +1,5 @@
 import React from "react";
-import "./WordleStats.css";
+import "./ShowStats.css";
 
 function WordleStats(props) {
   return (

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import "../styles/Board.css";
-import Tile from "./Tile";
-import { AppContext } from "../App";
+import "../GameBoard/Board.css";
+import Tile from "../GameBoard/BoardTile/Tile.jsx";
+import { AppContext } from "../../../../App";
 
 function Board() {
   const { gamesPlayed } = useContext(AppContext);

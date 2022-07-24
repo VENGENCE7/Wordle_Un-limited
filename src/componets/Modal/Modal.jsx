@@ -2,8 +2,8 @@ import React, { createContext, useState } from "react";
 import ReactDom from "react-dom";
 import "./Modal.css";
 import { SiGoogleplay } from "react-icons/si";
-import ModalNav from "./ModalNav";
-import NavHeads from "./NavHeads";
+import ModalNav from "./ModalNavBar/ModalNav";
+import NavHeads from "./ModalNavBar/NavHeads";
 
 export const ModalContext = createContext();
 
@@ -21,7 +21,9 @@ export default function Modal(props) {
               Instructions
             </div>
           </div>
-          <ModalContext.Provider value={{ showNavHead, setShowNavHead, allstats }}>
+          <ModalContext.Provider
+            value={{ showNavHead, setShowNavHead, allstats }}
+          >
             <ModalNav />
             <div className="modal-body">
               <NavHeads />

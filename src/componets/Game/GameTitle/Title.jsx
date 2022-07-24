@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import "../styles/Nav.css";
-import { AppContext } from "../App";
+import "./Title.css";
+import { AppContext } from "../../../App";
 
 function Nav() {
   function refreshPage() {

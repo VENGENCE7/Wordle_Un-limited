@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { ModalContext } from "./Modal";
-import WordleStats from "./WordleStats";
+import { ModalContext } from "../../Modal";
+import WordleStats from "./ShowStats/ShowStats";
 import "./AllStats.css";
-import { StatsChart } from "./StatsChart";
+import { StatsChart } from "./StatChart/StatsChart";
 
 function AllStats() {
   const { allstats } = useContext(ModalContext);

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { AppContext } from "../App";
-import "../styles/GameOver.css";
+import { AppContext } from "../../../../App";
+import "../GameOver/GameOver.css";
 
 function GameOver(props) {
   const { CurrAttempt, correctWord, gameOver } = useContext(AppContext);

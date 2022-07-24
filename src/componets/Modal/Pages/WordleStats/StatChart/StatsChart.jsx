@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ModalContext } from "./Modal";
+import { ModalContext } from "../../../Modal";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 

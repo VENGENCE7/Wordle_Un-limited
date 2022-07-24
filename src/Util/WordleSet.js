@@ -1,4 +1,4 @@
-import WordBank from "../WordBank.txt";
+import WordBank from "./WordBank.txt";
 export const emptyBoard = [
   ["", "", "", "", ""],
   ["", "", "", "", ""],

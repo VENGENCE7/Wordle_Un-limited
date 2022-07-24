@@ -1,12 +1,12 @@
-import "./styles/App.css";
+import "./App.css";
 import React, { useEffect, useState, createContext } from "react";
-import { emptyBoard, generateWordSet } from "./componets/WordleSet";
-import Nav from "./componets/Nav";
-import Alert from "./componets/Alert";
-import GameOver from "./componets/GameOver";
-import GameStatistics from "./componets/GameStatistics";
-import Score from "./componets/Score";
-import Game from "./componets/Game";
+import { emptyBoard, generateWordSet } from "./Util/WordleSet";
+import Nav from "./componets/Game/GameTitle/Title.jsx";
+import Alert from "./componets/Game/Notifications/Alert/Alert.jsx";
+import GameOver from "./componets/Game/Notifications/GameOver/GameOver.jsx";
+import GameStatistics from "./componets/Game/GameStats/GameStatistics.jsx";
+import Score from "./componets/Game/Score&HelpSection/Score.jsx";
+import Game from "./componets/Game/PlayingArea/Game.jsx";
 
 export const AppContext = createContext();
 
