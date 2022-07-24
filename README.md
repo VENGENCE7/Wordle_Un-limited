@@ -27,7 +27,14 @@
     This is a Wordle-Unlimited clone with my touch to its UI ,giving it a modern look and experience to the user.It has 5757 words availabke to guess.Developed using react.It also uses Local Storage,hence ur progress isn't lost until u clear browsing data XD. Have fun :)  playing it.
     <br />
     <br />
-    <a href="https://vengence7.github.io/Wordle_Unlimited/"><strong> << View Deployment >></strong></a>
+    <a href="https://vengence7.github.io/Wordle_Unlimited/"><strong> << Git Hub Deployment >></strong></a>
+    <br />
+    <br />
+    <a href="https://wordle-unlimited-vengence7.vercel.app"><strong> << Vercel Deployment >></strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/VENGENCE7/Wordle_Unlimited/tree/master/Gallery"><strong> +> Wordle Image Gallery <+ </strong></a>
+    <br />
     <br />
     <br />
     <a href="https://github.com/VENGENCE7/Wordle_Unlimited/issues">Report Bug</a>
@@ -38,7 +45,12 @@
 
 # Preview
 
-![Worlde_Unlimited](https://user-images.githubusercontent.com/86911386/171996970-5cff843e-e2c4-49d8-a212-88194f0665c3.png)
+![Wordle-Laptop](https://user-images.githubusercontent.com/86911386/180652160-2879cb85-3340-4b04-aa5a-d127fefc338c.png)
+<br />
+<br />
+![Wordle-Bonus-Laptop](https://user-images.githubusercontent.com/86911386/180652122-5d91bc5e-24c6-45cb-8f68-ff0e6b69955b.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started with Create React App
 
@@ -80,6 +92,8 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Learn More
 
