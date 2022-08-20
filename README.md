@@ -40,6 +40,8 @@
     <a href="https://github.com/VENGENCE7/Wordle_Unlimited/issues">Report Bug</a>
      : 
     <a href="https://github.com/VENGENCE7/Wordle_Unlimited/issues">Request Feature</a>
+      :
+    <a href="#contact">Contact me</a>
   </p>
 </div>
 
