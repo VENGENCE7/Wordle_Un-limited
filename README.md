@@ -12,6 +12,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Vercel][vercel-shield]][vercel-url]
 [![GH-Pages][gh-pages-shield]][gh-pages-url]
+[![Netlify][Netlify-shield]][Netlify-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -31,6 +32,9 @@
     <br />
     <br />
     <a href="https://wordle-unlimited-vengence7.vercel.app"><strong> << Vercel Deployment >></strong></a>
+    <br />
+    <br />
+    <a href="https://wordle-un-limited.netlify.app/"><strong> << Netlify Deployment >></strong></a>
     <br />
     <br />
     <a href="https://github.com/VENGENCE7/Wordle_Unlimited/tree/master/Gallery"><strong> +> Wordle Image Gallery <+ </strong></a>
@@ -168,3 +172,5 @@ Github Profile : [https://github.com/VENGENCE7](https://github.com/VENGENCE7)
 [vercel-url]: https://wordle-unlimited-vengence7.vercel.app
 [gh-pages-shield]: https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white
 [gh-pages-url]: https://vengence7.github.io/Wordle_Unlimited/
+[Netlify-shield]:https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
+[Netlify-url]:https://ev-catalog.netlify.app/
