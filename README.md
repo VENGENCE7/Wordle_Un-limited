@@ -24,8 +24,12 @@
 
 <h3 align="center">Wordle_Unlimited</h3>
 
+
+#### This is a progressive web application (PWA).Can be installed on phone and played offline.
+ 
   <p align="center">
     This is a Wordle-Unlimited clone with my touch to its UI ,giving it a modern look and experience to the user.It has 5757 words availabke to guess.Developed using react.It also uses Local Storage,hence ur progress isn't lost until u clear browsing data XD. Have fun :)  playing it.
+    <br />
     <br />
     <br />
     <a href="https://vengence7.github.io/Wordle_Unlimited/"><strong> << Git Hub Deployment >></strong></a>
