@@ -177,4 +177,4 @@ Github Profile : [https://github.com/VENGENCE7](https://github.com/VENGENCE7)
 [gh-pages-shield]: https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white
 [gh-pages-url]: https://vengence7.github.io/Wordle_Unlimited/
 [Netlify-shield]:https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
-[Netlify-url]:https://ev-catalog.netlify.app/
+[Netlify-url]:https://wordle-un-limited.netlify.app/
